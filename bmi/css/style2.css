@@ -1,0 +1,368 @@
+/* CSS Reset */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+q,
+blockquote {
+    quotes: none;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+    content: "";
+    content: none;
+}
+
+a img {
+    border: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+html {}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/*針對chrome藍色外框*/
+
+button:focus {
+    outline: none;
+}
+
+
+/*針對chrome藍色外框*/
+
+
+/* CSS Reset end */
+li{display: block;cursor:pointer;}
+.wrap {
+    font-family: Microsoft JhengHei, Verdana, Arial, Helvetica, sans-serif;
+    max-width: 1024px;
+    margin: 0 auto;
+    background: #eeeeee;
+}
+
+.header {
+    height: 300px;
+    background: #424242;
+    color: #FFD366;
+}
+
+.logo {
+    float: left;
+    margin: 90px 0 90px 153px;
+}
+
+.text {
+    float: left;
+    margin: 60px 0 60px 80px;
+    font-size: 18px;
+}
+
+.text input {
+    float: left;
+    display: block;
+    padding: 5px 10px;
+    margin: 8px 0 20px 0;
+    border: 2px solid #FFD366;
+    border-radius: 8px;
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+#countId {
+    float: left;
+    border-radius: 100px;
+    width: 120px;
+    height: 120px;
+    background: #FFD366;
+    line-height: 120px;
+    text-align: center;
+    margin: 80px 0 0 60px;
+    color: #424242;
+    font-size: 24px;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+}
+
+#countId:active {
+    background: #DEA921;
+}
+
+#countId:hover {
+    box-shadow: 0px 1px 6px 3px rgba(255, 195, 49, 0.64);
+}
+
+.result {
+    float: left;
+    width: 123px;
+    height: 123px;
+    margin: 80px 0 0 60px;
+}
+
+.img {
+    float: left;
+    margin: -38px 0px 0 95px;
+    padding: 3px 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.Light,
+.Standard,
+.SWeight,
+.MWeight,
+.LWeight,
+.XLWeight {
+    font-size: 32px;
+    width: 123px;
+    height: 123px;
+    line-height: 110px;
+    border-radius: 100px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Lightbmi,
+.Standardbmi,
+.SWeightbmi,
+.MWeightbmi,
+.LWeightbmi,
+.XLWeightbmi {
+    font-size: 14px;
+    float: left;
+    margin: -40px 0 0 50px;
+}
+
+.Lightword,
+.Standardword,
+.SWeightword,
+.MWeightword,
+.LWeightword,
+.XLWeightword {
+    font-size: 32px;
+    float: left;
+    margin: -78px 0 0 130px;
+    width: 70px;
+}
+
+.content {
+    padding: 10px 5px;
+    margin-bottom: 50px;
+}
+
+.content h3 {
+    font-size: 24px;
+    color: #424242;
+    font-weight: bold;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.list_item {
+    margin: 16px 0;
+}
+
+.list_box {
+    width: 624px;
+    height: 62px;
+    background: white;
+    margin: 0 auto;
+    display: block;
+}
+
+.colorline {
+    float: left;
+    width: 7px;
+    height: 62px;
+}
+
+.list_title h2 {
+    margin-left: 10px;
+    width: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #4A4A4A;
+    height: 62px;
+    line-height: 62px;
+    float: left;
+}
+
+.list_text {
+    width: 120px;
+    color: #4A4A4A;
+    height: 62px;
+    line-height: 62px;
+    float: left;
+    margin: 0 5px;
+}
+
+.list_text h4 {
+    font-size: 12px;
+    float: left;
+}
+
+.list_text span {
+    margin-left: 7px;
+}
+
+.list_date {
+    color: #4A4A4A;
+    height: 62px;
+    line-height: 62px;
+    float: left;
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+.footer {
+    height: 90px;
+    background: #FFD366;
+    text-align: center;
+}
+
+.footer img {
+    margin-top: 15px;
+    width: 55px;
+    height: 55px;
+}
