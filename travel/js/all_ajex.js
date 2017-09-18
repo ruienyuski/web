@@ -1,4 +1,4 @@
-let url = 'http://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97';
+let url = 'https://ruienyuski.github.io/web/travel/js/travel.json';
 let optionData;
 let data = [];
 let selectItem = [];
@@ -11,29 +11,30 @@ let listpage = document.querySelector('.page')
 
 // 此次是要撈取全部的地區用
 callAjax(url);
+
 function callAjax(url) {
-let xhr;
- xhr = new XMLHttpRequest();
- xhr.open('get', url, true);
- xhr.send(null);
+    let xhr;
+    xhr = new XMLHttpRequest();
+    xhr.open('get', url, true);
+    xhr.send(null);
 
-xhr.onload = function(){
-	if (xhr.readyState == 4 && xhr.status == 200){
-	let record = JSON.parse(xhr.responseText);
-	optionData  = record.result.records;
-	// 若載入的時候已經有產生選單之後就不再做
-                if (selectItem.length < 1) {
-                    renderOption(optionData);
-                }
-                // 渲染內容
-                // 當不是第一次載入時不做renderContent = 沒有查詢
-                if (status != 0) {
-                    // 有觸發到下拉選單或熱門區都是第一頁開始
-                    renderContent(1);
-                }
+    xhr.onload = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            let record = JSON.parse(xhr.responseText);
+            optionData = record.result.records;
+            // 若載入的時候已經有產生選單之後就不再做
+            if (selectItem.length < 1) {
+                renderOption(optionData);
+            }
+            // 渲染內容
+            // 當不是第一次載入時不做renderContent = 沒有查詢
+            if (status != 0) {
+                // 有觸發到下拉選單或熱門區都是第一頁開始
+                renderContent(1);
+            }
 
-		};
-	};
+        };
+    };
 };
 
 
@@ -42,11 +43,11 @@ xhr.onload = function(){
 // 判斷有哪些地區，並且重複的地區塞到selectItem內
 function renderOption(option) {
     for (let i = 0; i < option.length; i++) {
-       
+
         if (selectItem.indexOf(option[i].Zone) == -1) {
             selectItem.push(option[i].Zone);
             //console.log(option[i].Zone); 
-        } 
+        }
     }
 
     // 將selectItem內的資料渲染到option內
@@ -66,13 +67,13 @@ function renderContent(goPage) {
 
     totalItem = data.length;
     // 當沒有查詢到資料的時候
- if (totalItem == 0) {
+    if (totalItem == 0) {
         title.textContent = '查無資料';
         list.innerHTML = '';
         listpage.style.display = 'none';
         return false;
     }
-     // 有資料的時候只要取第一筆的name即可
+    // 有資料的時候只要取第一筆的name即可
     title.textContent = data[0].Zone;
     // 計算總共有幾頁(使用無條件進位)
     totoalPage = Math.ceil(totalItem / perPage);
@@ -82,7 +83,7 @@ function renderContent(goPage) {
     let startItem;
     let endItem;
     // 如果是最後一頁要判斷抓取幾筆資料， 其餘都一定是6筆
-if (goPage == totoalPage) {
+    if (goPage == totoalPage) {
         let minusItem = totalItem - (totoalPage * perPage);
 
         if (minusItem == 0) { //判斷最後一頁是幾筆用 = 0 就是6筆
@@ -97,26 +98,26 @@ if (goPage == totoalPage) {
         endItem = (goPage * 6);
 
     }
-     let str = '';
+    let str = '';
     for (let i = startItem; i < endItem; i++) {
-          	let name = `<h2>${data[i].Name}</h2>`;
-            let zone = `<h4>${data[i].Zone}</h4>`;
-            let picture = `<p><div class ="picture"><img src="${data[i].Picture1}"></div></p>`
-            let opentime = `<div class = "li_block"><img src="images/icons_clock.png" class="li_icon"><div class ="opentime">${data[i].Opentime}</div></div>`
-            let address = `<div class = "li_block"><img src="images/icons_pin.png" class="li_icon"><div class ="address">${data[i].Add}</div></div>`
-            let tel = `<div class = "li_block_left"><img src="images/icons_phone.png" class="li_icon_tel"><div class ="tel">${data[i].Tel}</div></div>`
-       
-          if (data[i].Ticketinfo != "") {
-                ticket = `<div class = "li_block_right"><img src="images/icons_tag.png"class="li_icon_ticket" >${data[i].Ticketinfo}</div>`
-            } else {
-                ticket = "";
-            };
-         str += '<li>' + name + zone + picture + opentime + address + tel + ticket + '</li>';
+        let name = `<h2>${data[i].Name}</h2>`;
+        let zone = `<h4>${data[i].Zone}</h4>`;
+        let picture = `<p><div class ="picture"><img src="${data[i].Picture1}"></div></p>`
+        let opentime = `<div class = "li_block"><img src="images/icons_clock.png" class="li_icon"><div class ="opentime">${data[i].Opentime}</div></div>`
+        let address = `<div class = "li_block"><img src="images/icons_pin.png" class="li_icon"><div class ="address">${data[i].Add}</div></div>`
+        let tel = `<div class = "li_block_left"><img src="images/icons_phone.png" class="li_icon_tel"><div class ="tel">${data[i].Tel}</div></div>`
+
+        if (data[i].Ticketinfo != "") {
+            ticket = `<div class = "li_block_right"><img src="images/icons_tag.png"class="li_icon_ticket" >${data[i].Ticketinfo}</div>`
+        } else {
+            ticket = "";
         };
-        list.innerHTML = str;
-  // 紀錄目前頁數用來點選上下頁用
+        str += '<li>' + name + zone + picture + opentime + address + tel + ticket + '</li>';
+    };
+    list.innerHTML = str;
+    // 紀錄目前頁數用來點選上下頁用
     currentPage = goPage;
- // 渲染頁碼
+    // 渲染頁碼
     renderPage(totoalPage);
 }
 
@@ -152,10 +153,10 @@ area.addEventListener('change', function(e) {
     if (objValue != "") {
         // 重串url條件(jason查詢&q=三民區)
         let newurl = url + '&q=' + objValue;
-        
+
         queryArea(objValue);
-        
-        renderContent(1);//從第一頁開始
+
+        renderContent(1); //從第一頁開始
     }
 });
 // 熱門區按鈕做偵聽
@@ -166,7 +167,7 @@ btn.addEventListener('click', function(e) {
         // 重串url條件
         let newurl = url + '&q=' + e.target.textContent;
         queryArea(e.target.textContent);
-      
+
         renderContent(1);
     }
 });
