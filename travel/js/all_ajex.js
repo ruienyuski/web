@@ -6,8 +6,89 @@ let area = document.getElementById('areaId');
 let list = document.querySelector('.list');
 let title = document.querySelector('.title');
 let btn = document.querySelector('.hot_list');
-let listpage = document.querySelector('.page')
-//let top = document.querySelector('.top');
+let listpage = document.querySelector('.page');
+let googleMap = document.getElementById('map');
+let infowindow;
+let markers=[];
+let currentInfoWindow = '';
+let xhr = new XMLHttpRequest();
+
+// 當有滾動的時候
+window.onscroll = function() {
+    // 移動的距離
+    let scPos = window.pageYOffset;
+    if (scPos > (window.innerHeight) / 3) {
+        document.querySelector('.top').style.display = '';
+    } else {
+        document.querySelector('.top').style.display = 'none';
+    }
+};
+
+document.querySelector('.top').addEventListener('click', function (e) {
+   scrollTo(document.body, 0, 1250);   
+});
+    
+function scrollTo(element, to, duration) {
+    let start = element.scrollTop,
+        change = to - start,
+        currentTime = 0,
+        increment = 20;
+        
+    let animateScroll = function(){        
+        currentTime += increment;
+        let val = Math.easeInOutQuad(currentTime, start, change, duration);
+        element.scrollTop = val;
+        if(currentTime < duration) {
+            setTimeout(animateScroll, increment);
+        }
+    };
+    animateScroll();
+}
+
+//t = current time
+//b = start value
+//c = change in value
+//d = duration
+Math.easeInOutQuad = function (t, b, c, d) {
+  t /= d/2;
+    if (t < 1) return c/2*t*t + b;
+    t--;
+    return -c/2 * (t*(t-2) - 1) + b;
+};
+
+
+    function initMap() {
+                map = new google.maps.Map(googleMap,{
+                zoom:10,
+                center: { lat: 22.6048695,lng: 120.299119}
+    });
+    callAjax(url);
+    }
+ 
+
+function loadData(lat,lng,title){
+let infowindow = new google.maps.InfoWindow({
+    content: title
+  });
+  
+  let marker = new google.maps.Marker({
+    position: {lat: parseFloat(lat), lng: parseFloat(lng)},
+    title: title,
+    map: map,
+  });
+  marker.addListener('click', function() {
+     if(currentInfoWindow != '')   
+      {    
+        currentInfoWindow.close();   
+        currentInfoWindow = '';   
+      }   
+      infowindow.open(map, marker);   
+      currentInfoWindow = infowindow; 
+  });
+  markers.push(marker);
+}
+
+
 
 // 此次是要撈取全部的地區用
 callAjax(url);
@@ -22,6 +103,12 @@ function callAjax(url) {
         if (xhr.readyState == 4 && xhr.status == 200) {
             let record = JSON.parse(xhr.responseText);
             optionData = record.result.records;
+             len = optionData.length;
+        for(let i=0;optionData.length>i;i++){
+            loadData(optionData[i].Py,optionData[i].Px,optionData[i].Picdescribe1);
+            }
+
+
             // 若載入的時候已經有產生選單之後就不再做
             if (selectItem.length < 1) {
                 renderOption(optionData);
@@ -46,7 +133,7 @@ function renderOption(option) {
 
         if (selectItem.indexOf(option[i].Zone) == -1) {
             selectItem.push(option[i].Zone);
-            //console.log(option[i].Zone); 
+           
         }
     }
 
@@ -106,7 +193,8 @@ function renderContent(goPage) {
         let opentime = `<div class = "li_block"><img src="images/icons_clock.png" class="li_icon"><div class ="opentime">${data[i].Opentime}</div></div>`
         let address = `<div class = "li_block"><img src="images/icons_pin.png" class="li_icon"><div class ="address">${data[i].Add}</div></div>`
         let tel = `<div class = "li_block_left"><img src="images/icons_phone.png" class="li_icon_tel"><div class ="tel">${data[i].Tel}</div></div>`
-
+        
+      
         if (data[i].Ticketinfo != "") {
             ticket = `<div class = "li_block_right"><img src="images/icons_tag.png"class="li_icon_ticket" >${data[i].Ticketinfo}</div>`
         } else {
@@ -136,7 +224,7 @@ function renderPage() {
         if (totoalPage > 0) {
             let nbrHtml = '';
             for (let i = 0; i < totoalPage; i++) {
-                let tempNbr = `<a href="#"  data-page=" + (i + 1) + ">` + (i + 1) + `</a> `;
+                let tempNbr = '<a href="#" data-page="' + (i + 1) + '">' + (i + 1) + '</a> ';
                 nbrHtml += tempNbr;
             }
 
@@ -149,8 +237,21 @@ function renderPage() {
 // 觸發下拉都是從第一頁開始
 area.addEventListener('change', function(e) {
     let objValue = e.target.value;
+    for(i=0;i<markers.length;i++){
+        markers[i].setMap(null);   
+        }
+       markers = []; 
+       infoWindows = [];
+   // 載入資料
+       for(let i=0;optionData.length>i;i++){
+          if(optionData[i].Zone== objValue){
+            loadData(optionData[i].Py,optionData[i].Px,optionData[i].Picdescribe1)
+          }
+        }
+
     // 不是選到請選擇在去做執行
     if (objValue != "") {
+
         // 重串url條件(jason查詢&q=三民區)
         let newurl = url + '&q=' + objValue;
 
@@ -162,6 +263,20 @@ area.addEventListener('change', function(e) {
 // 熱門區按鈕做偵聽
 btn.addEventListener('click', function(e) {
     e.preventDefault();
+
+    for(i=0;i<markers.length;i++){
+        markers[i].setMap(null);   
+        }
+       markers = []; 
+       infoWindows = [];
+   // 載入資料
+       for(let i=0;optionData.length>i;i++){
+          if(optionData[i].Zone== e.target.textContent){
+            loadData(optionData[i].Py,optionData[i].Px,optionData[i].Picdescribe1)
+          }
+        }
+
+
     // 是點選到a標籤
     if (e.target.nodeName == 'A') {
         // 重串url條件

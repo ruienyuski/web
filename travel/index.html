@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <title>高雄旅遊網</title>
     <link rel="stylesheet" href="css/style.css">
+   
 </head>
 
 <body>
     <div class="wrap">
-        <div class="top"><a href="#"><img src="images/btn_goTop.png"></a></div>
+
         <div class="header">
             <div class="backimg">
                 <h1>高雄旅遊資訊</h1>
@@ -72,6 +73,7 @@
         </div>
         <div class="content">
             <h1 class="title"></h1>
+            <div id="map"></div>
             <ul class="list">
             </ul>
         </div>
@@ -82,7 +84,12 @@
             <p>資料來源:高雄市政府</p>
         </div>
     </div>
+    <div class="top">
+            <a href="#"><img src="images/btn_goTop.png"></a>
+        </div>
     <script src="js/all_ajex.js"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpeX3j95y_5KS7Y6zjnZr1DPw5Rom5pLM&callback=initMap"
+    async defer></script>
 </body>
 
 </html>
