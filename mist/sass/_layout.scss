@@ -7,8 +7,8 @@ body{
 	.logo_banner{
 
 		img{
-		width: 90vh;
-		}
+			width: 100%;
+			}
 		h1{
 			font-size: 2.3rem;
 
@@ -31,4 +31,15 @@ body{
 }
 .bg-attachment{
 	background-attachment: fixed;// 背景圖固定
+}
+.border-8 {
+    border: 8px solid white!important;
+}
+.quote{
+	background-color:white;
+	padding: 5%;
+	border-radius: 30px; 
+}
+.text-quote{
+	color: #eee;
 }
