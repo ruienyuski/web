@@ -30,7 +30,7 @@ body {
 .border-8 {
   border: 8px solid white !important; }
 
-.quote {
+.quotebox {
   background-color: white;
   padding: 5%;
   border-radius: 30px; }
