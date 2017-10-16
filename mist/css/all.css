@@ -38,6 +38,9 @@ body {
 .text-quote {
   color: #eee; }
 
+.footer-bg {
+  background-color: black; }
+
 /*index.html開始*/
 .special {
   background-repeat: no-repeat;

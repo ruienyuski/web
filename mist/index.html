@@ -2,51 +2,85 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>迷霧咖啡</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/all.css">
+	<meta charset="UTF-8">
+	<title>迷霧咖啡</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
 </head>
 
 <body>
-    <header class="header d-flex justify-content-center align-items-center bg-cover bg-attachment">
-        <div class="logo_banner text-center text-warning">
-            <img src="images/logo_w.svg">
-            <h1 class="p-1 font-weight-bold">歡迎來到MistCoffee</h2>	
-			<p class="font-weight-bold">咖啡 ‧ 茶飲 ‧ 簡餐</p>
-			<div class="mt-4 ">
-				<a href="#" class="btn btn-outline-light  py-3 m-2 font-weight-bold">本月推薦</a>
-				<a href="#" class="btn btn-outline-warning  py-3  m-2 font-weight-bold">線上點餐</a>
-			</div>
+	<header class="header d-flex justify-content-center align-items-center bg-cover bg-attachment">
+		<div class="logo_banner text-center text-warning">
+			<img src="images/logo_w.svg">
+			<h1 class="p-1 font-weight-bold">歡迎來到MistCoffee</h2>
+				<p class="font-weight-bold">咖啡 ‧ 茶飲 ‧ 簡餐</p>
+				<div class="mt-4 ">
+					<a href="recommend.html#recommend" class="btn btn-outline-light  py-3 m-2 font-weight-bold">本月推薦</a>
+					<a href="index.html#order" class="btn btn-outline-warning  py-3  m-2 font-weight-bold">線上訂位</a>
+				</div>
 		</div>
 	</header>
-	<nav class="navbar navbar-expand-lg navbar-dark navbar-bg sticky-top"><!-- sticky-top narbar隨頁面移動時會固定到上方ie不支援 -->
-	  <a class="navbar-brand" href="#">Navbar</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-bg sticky-top">
+		<!-- sticky-top narbar隨頁面移動時會固定到上方ie不支援 -->
+		<a class="navbar-brand" href="index.html">MistCoffee</a>
+		<a class="btn btn-primary mr-auto" href="car.html#car" role="button">購物車</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	    <ul class="navbar-nav mr-auto">
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#">Link</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link disabled" href="#">Disabled</a>
-	      </li>
-	    </ul>
-	    <form class="form-inline my-2 my-lg-0">
-	      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	    </form>
-	  </div>
-	</nav>	
+		<div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+			<ul class="navbar-nav">
+				<li class="nav-item active mx-2">
+					<a class="nav-link" href="index.html">Home
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item mx-2">
+					<a class="nav-link" href="index.html#about">關於我們</a>
+				</li>
+				<li class="nav-item mx-2">
+					<a class="nav-link" href="recommend.html#recommend">本月推薦菜單</a>
+				</li>
+				<li class="nav-item mx-2">
+					<div class="dropdown show">
+						<a class="btn btn-danger dropdown-toggle" href="allmenu.html" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+						 aria-haspopup="true" aria-expanded="false">
+							美味餐點
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="menu.html#menu">套餐</a>
+							<a class="dropdown-item" href="menu.html#menu">咖啡、茶飲</a>
+							<a class="dropdown-item" href="menu.html#menu">蛋糕點心</a>
+							<div class="dropdown-divider"></div>
 
-	<section class="py-5">
+						</div>
+					</div>
+				</li>
+
+
+			</ul>
+
+
+		
+			<form class="form-inline my-2 my-lg-0">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+					<span class="input-group-btn">
+						<button class="btn btn-success" type="button">搜尋</button>
+					</span>
+				</div>
+			</form>
+
+			<form action="mx-2">
+				<a href="#" class="btn btn-outline-primary mr-1" data-toggle="modal" data-target="#loginModal">登入</a>
+				<a href="#" class="btn px-4 btn-primary" data-toggle="modal" data-target="#registerModal">註冊</a>
+			</form>
+		</div>
+	</nav>
+
+	<section class="py-5" id="about">
 		<div class="container">
 			<h2 class="text-center">關於我們</h2>
 			<p class="text-center ">他來我會。不下散考童空道大病境問法此間開，告生靈。這身線驚館有念</p>
@@ -64,7 +98,7 @@
 		</div>
 	</section>
 
-		<section class="py-5 special  bg-cover bg-attachment">
+	<section class="py-5 special  bg-cover bg-attachment">
 		<div class="container text-white">
 			<h2 class="text-center">好吃的秘訣</h2>
 			<p class="text-center">統下看出響重當站提們線的復方；後因許指子，造分小車巴是所一。</p>
@@ -135,94 +169,385 @@
 	<section class="py-5">
 		<div class="container">
 			<h2 class="text-center mb-4">本月推薦</h2>
-			<p  class="text-center">經人不哥然示也大果除間歌樣輕境的書雨沒係用有！</p>
-		
+			<p class="text-center">經人不哥然示也大果除間歌樣輕境的書雨沒係用有！</p>
+
 			<div class="row">
-				<div class="col-md-3 col-sm-6 my-2">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1455853659719-4b521eebc76d?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop=" alt="">
+
+				<div class="col-md-3">
+					<div class="card mb-3">
+						<img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1455853659719-4b521eebc76d?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="
+						 alt="Card image cap">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-12 d-flex justify-content-center">
+									<h4 class="card-title text-center">
+										繽紛水果派
+									</h4>
+									<h6 class="ml-1">
+										<span class="badge badge-pill badge-success">全素</span>
+									</h6>
+								</div>
+
+							</div>
+							<a href="#" class="btn btn-outline-primary btn-md btn-block ">詳細介紹</a>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 my-2">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1453831362806-3d5577f014a4?dpr=1&auto=compress,format&fit=crop&w=738&h=&q=80&cs=tinysrgb&crop=" alt="">
+				<div class="col-md-3">
+					<div class="card mb-3">
+						<img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1453831362806-3d5577f014a4?dpr=1&auto=compress,format&fit=crop&w=738&h=&q=80&cs=tinysrgb&crop="
+						 alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title text-center">
+								繽紛水果派
+							</h4>
+							<a href="#" class="btn btn-outline-primary btn-md btn-block ">詳細介紹</a>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 my-2">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop=" alt="">
+				<div class="col-md-3">
+					<div class="card mb-3">
+						<img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="
+						 alt="Card image cap">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-12 d-flex justify-content-center">
+									<h4 class="card-title text-center">
+										繽紛水果派
+									</h4>
+									<h6 class="ml-1">
+										<span class="badge badge-pill badge-success">奶素</span>
+									</h6>
+								</div>
+
+							</div>
+							<a href="#" class="btn btn-outline-primary btn-md btn-block ">詳細介紹</a>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 my-2">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1495214783159-3503fd1b572d?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop=" alt="">
+				<div class="col-md-3">
+					<div class="card mb-3">
+						<img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1495214783159-3503fd1b572d?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="
+						 alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title text-center">
+								繽紛水果派
+							</h4>
+							<a href="#" class="btn btn-outline-primary btn-md btn-block ">詳細介紹</a>
+						</div>
+					</div>
+
+
 				</div>
 			</div>
 			<div class="row d-flex flex-row-reverse">
-				<div class="col-md-3 col-sm-6 my-2">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1455853659719-4b521eebc76d?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop=" alt="">
+
+				<div class="col-md-3">
+					<div class="card mb-3">
+						<img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1455853659719-4b521eebc76d?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="
+						 alt="Card image cap">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-12 d-flex justify-content-center">
+									<h4 class="card-title text-center">
+										繽紛水果派
+									</h4>
+									<h6 class="ml-1">
+										<span class="badge badge-pill badge-success">全素</span>
+									</h6>
+								</div>
+
+							</div>
+							<a href="#" class="btn btn-outline-primary btn-md btn-block ">詳細介紹</a>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 my-2">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1453831362806-3d5577f014a4?dpr=1&auto=compress,format&fit=crop&w=738&h=&q=80&cs=tinysrgb&crop=" alt="">
+				<div class="col-md-3">
+					<div class="card mb-3">
+						<img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1453831362806-3d5577f014a4?dpr=1&auto=compress,format&fit=crop&w=738&h=&q=80&cs=tinysrgb&crop="
+						 alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title text-center">
+								繽紛水果派
+							</h4>
+							<a href="#" class="btn btn-outline-primary btn-md btn-block ">詳細介紹</a>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 my-2">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop=" alt="">
+				<div class="col-md-3">
+					<div class="card mb-3">
+						<img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="
+						 alt="Card image cap">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-12 d-flex justify-content-center">
+									<h4 class="card-title text-center">
+										繽紛水果派
+									</h4>
+									<h6 class="ml-1">
+										<span class="badge badge-pill badge-success">奶素</span>
+									</h6>
+								</div>
+
+							</div>
+							<a href="#" class="btn btn-outline-primary btn-md btn-block ">詳細介紹</a>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 my-2">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1495214783159-3503fd1b572d?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop=" alt="">
+				<div class="col-md-3">
+					<div class="card mb-3">
+						<img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1495214783159-3503fd1b572d?dpr=1&auto=compress,format&fit=crop&w=750&h=&q=80&cs=tinysrgb&crop="
+						 alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title text-center">
+								繽紛水果派
+							</h4>
+							<a href="#" class="btn btn-outline-primary btn-md btn-block ">詳細介紹</a>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+
+	<section class="py-5 bg-light">
+		<div class="container">
+			<div class="mb-5 text-center">
+				<h2 class="mb-4">網友推薦</h2>
+				<p>養外政的表曾我機選會氣畫全快有。</p>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12  p-3">
+					<div class="d-flex py-3 mr-2">
+						<div class="col-md-2">
+							<img class="img-fluid rounded-circle  border-8" src="https://randomuser.me/api/portraits/women/51.jpg" alt="">
+							<div class="text-center">
+								<h5 class="pt-3 text-info">Sara Wilsson</h3>
+									<span>Odeo Inc</span>
+							</div>
+						</div>
+						<div class="col-md-10 quotebox  align-self-center">
+							<i class="fa fa-quote-left fa-3x d-flex justify-content-start text-quote" aria-hidden="true"></i>
+							<p class="d-flex justify-content-center font-italic pt-3">電其有治答等又乎深吃，演美藝成關於目藥心兒舞腳者體容總百並事滿，間火精最國期保！給人小相不建下到？環新很放！且治廣心術之程張或樣業影好夫義房則三學查更、突提步出而媽校義過未麼我……們增地得多出……覺山如消，市果雄一得引推書一可展力時具不？</p>
+							<i class="fa fa-quote-right fa-3x d-flex justify-content-end text-quote " aria-hidden="true"></i>
+						</div>
+					</div>
+					<div class="d-flex flex-row-reverse py-3">
+						<div class="col-md-2 ml-2">
+							<img class="img-fluid rounded-circle  border-8" src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
+							<div class="text-center">
+								<h5 class="pt-3 text-info">Saul Goodman</h3>
+									<span>Lawless Inc</span>
+							</div>
+						</div>
+						<div class="col-md-10 quotebox  align-self-center">
+							<i class="fa fa-quote-left fa-3x d-flex justify-content-start text-quote" aria-hidden="true"></i>
+							<p class="d-flex justify-content-center font-italic pt-3">電其有治答等又乎深吃，演美藝成關於目藥心兒舞腳者體容總百並事滿，間火精最國期保！給人小相不建下到？環新很放！且治廣心術之程張或樣業影好夫義房則三學查更、突提步出而媽校義過未麼我……們增地得多出……覺山如消，市果雄一得引推書一可展力時具不？</p>
+							<i class="fa fa-quote-right fa-3x d-flex justify-content-end text-quote " aria-hidden="true"></i>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section  class="py-5">
-			<div class="container">
-				<h2 class="text-center">菜單介紹</h2>
-				<p class="text-center">統下看出響重當站提們線的復方；後因許指子，造分小車巴是所一。</p>
-				<div class="row"></div>
-			</div>
-		</section>
-
-	<section class="py-5 bg-light">
+	<section class="py-5" id="order">
 		<div class="container">
-			<div class="mb-5 text-center">
-					<h2 class="mb-4">網友推薦</h2>
-					<p>養外政的表曾我機選會氣畫全快有。</p>
+			<h2 class="text-center mb-4">網路訂位</h2>
+			<p class="text-center">請確實填寫資料，我們收到訂位資訊會用電話或簡訊方式與您確認訂位!</p>
+			<div class="row mt-5">
+				<div class="col-md-6 py-2">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5677.816828143391!2d120.30340830571953!3d22.66838115488874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0508a5de30d1%3A0x86c88c34d4d29f80!2z5ryi56We5beo6JuL6LO854mp5buj5aC0!5e0!3m2!1szh-TW!2stw!4v1508035158976"
+					 width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="col-md-6 py-2">
+					<form>
+						<div class="form-group">
+							<label for="name">姓名</label>
+							<input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="輸入姓名(必填欄位)" required>
+							<small id="nameHelp" class="form-text text-muted">本網站不會將資料提供給第三人、或移作其他目的使用</small>
+						</div>
+						<div class="form-group">
+							<label for="tel">聯絡電話</label>
+							<input type="tel" class="form-control" id="tel" aria-describedby="telHelp" placeholder="輸入電話號碼(必填欄位)" required>
+							<small id="telHelp" class="form-text text-muted">本網站不會將資料提供給第三人、或移作其他目的使用</small>
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="輸入email" required>
+							<small id="emailHelp" class="form-text text-muted">本網站不會將資料提供給第三人、或移作其他目的使用</small>
+						</div>
+						<div class="form-group">
+							<label for="number">訂位人數</label>
+							<input type="number" class="form-control" id="number" aria-describedby="emailHelp" placeholder="輸入人數" required>
+
+						</div>
+						<div class="form-check">
+							<label class="form-check-label">
+								<input type="checkbox" class="form-check-input"> 需要素食
+							</label>
+						</div>
+						<div class="text-right">
+							<button type="button" class="btn btn-secondary">取消</button>
+							<button type="submit" class="btn btn-primary">送出</button>
+						</div>
+
+					</form>
+				</div>
 			</div>
-			
-			<div class="row">
-				<div class="col-md-12  p-3">
-					<div class="d-flex py-3 mr-2">
-							<div class="col-md-2">
-									<img class="img-fluid rounded-circle  border-8" src="https://randomuser.me/api/portraits/women/51.jpg" alt="">
-									<div class="text-center">
-										<h5 class="pt-3 text-info">Sara Wilsson</h3>
-										<span>Odeo Inc</span>
-									</div>
-								</div>
-							<div class="col-md-10 quotebox  align-self-center">
-									<i class="fa fa-quote-left fa-3x d-flex justify-content-start text-quote" aria-hidden="true"></i>
-									<p class="d-flex justify-content-center font-italic pt-3">電其有治答等又乎深吃，演美藝成關於目藥心兒舞腳者體容總百並事滿，間火精最國期保！給人小相不建下到？環新很放！且治廣心術之程張或樣業影好夫義房則三學查更、突提步出而媽校義過未麼我……們增地得多出……覺山如消，市果雄一得引推書一可展力時具不？</p>
-									<i class="fa fa-quote-right fa-3x d-flex justify-content-end text-quote " aria-hidden="true"></i>
-							</div>
-					</div>
-					<div class="d-flex flex-row-reverse py-3">
-							<div class="col-md-2 ml-2">
-									<img class="img-fluid rounded-circle  border-8" src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
-									<div class="text-center">
-											<h5 class="pt-3 text-info">Saul Goodman</h3>
-											<span>Lawless Inc</span>
-										</div>
-								</div>
-							<div class="col-md-10 quotebox  align-self-center">
-									<i class="fa fa-quote-left fa-3x d-flex justify-content-start text-quote" aria-hidden="true"></i>
-									<p class="d-flex justify-content-center font-italic pt-3">電其有治答等又乎深吃，演美藝成關於目藥心兒舞腳者體容總百並事滿，間火精最國期保！給人小相不建下到？環新很放！且治廣心術之程張或樣業影好夫義房則三學查更、突提步出而媽校義過未麼我……們增地得多出……覺山如消，市果雄一得引推書一可展力時具不？</p>
-									<i class="fa fa-quote-right fa-3x d-flex justify-content-end text-quote " aria-hidden="true"></i>
-							</div>
-					</div>
+
+		</div>
+	</section>
+
+	<footer class="pt-5 footer-bg">
+		<div class="container">
+			<div class="row d-flex flex-column align-items-center">
+				<div class="col-md-4 ">
+					<a href="#" class="text-hexschool">
+						<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+					</a>
+					<a href="#" class="text-hexschool">
+						<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+					</a>
+					<a href="#" class="text-hexschool">
+						<i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="col-md-4 mt-2">
+					<p class="text-white text-justify">© Copright 2017 迷霧咖啡</p>
+					<p class="text-white text-justify">電話：07-1234567</p>
+					<p class="text-white text-justify">地址：813 高雄市左營區博愛二路777號</p>
 				</div>
 			</div>
 		</div>
-	</section>	
 
 
+	</footer>
 
-	<script type="js/all.js"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<!-- Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<form>
+				<div class="modal-content">
+
+					<div class="modal-header bg-primary text-white">
+						<h5 class="modal-title" id="loginModalLabel">登入服務</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+
+								<div class="form-group">
+									<label for="email">E-mail*</label>
+									<input type="email" class="form-control" id="email" placeholder="請輸入email" required>
+
+								</div>
+								<div class="form-group">
+									<label for="password">密碼*</label>
+									<input type="password" class="form-control" id="password" placeholder="請輸入密碼" required>
+
+								</div>
+
+
+								<div class="custom-controls-stacked">
+
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" value=""> 記住帳號
+									</label>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a href="#" class="mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">切換到註冊</a>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+						<button type="submit" class="btn btn-primary">登入</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<form>
+				<div class="modal-content">
+					<div class="modal-header bg-danger text-white">
+						<h5 class="modal-title" id="registerModalLabel">註冊服務</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-6">
+								<h3>會員註冊</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis sed aperiam, omnis, laudantium minus quibusdam corrupti
+									sunt tempora eveniet, modi molestiae. Quo libero quasi, labore vitae error animi voluptate doloribus!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis sed aperiam, omnis, laudantium minus quibusdam corrupti
+									sunt tempora eveniet, modi molestiae. Quo libero quasi, labore vitae error animi voluptate doloribus!
+								</p>
+							</div>
+							<div class="col-md-6">
+
+								<div class="form-group">
+									<label for="email">E-mail*</label>
+									<input type="email" class="form-control" id="email" placeholder="請輸入email" required>
+
+								</div>
+								<div class="form-group">
+									<label for="password">密碼*</label>
+									<input type="password" class="form-control" id="password" placeholder="請輸入密碼" required>
+
+								</div>
+								<div class="form-group">
+									<label for="password">確認密碼*</label>
+									<input type="password" class="form-control" id="password" placeholder="請輸入密碼" required>
+
+								</div>
+
+								<div class="custom-controls-stacked">
+
+									<label class="form-check-label">
+										<input class="form-check-input" type="checkbox" value="" required> 同意條款
+									</label>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a href="#" class="mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">切換到登入</a>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+						<button type="submit" class="btn btn-primary">註冊</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="js/all.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+	 crossorigin="anonymous"></script>
 </body>
+
 </html>
