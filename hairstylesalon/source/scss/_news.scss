@@ -1,0 +1,82 @@
+//news.html start
+.news_content{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 50px 0;
+    @include pad(){
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.news{
+    width: 60%;
+    @include pad(){
+        width: 90%;
+    }
+    h4{
+        font-size:$font-h4;
+        margin:0;
+        color:$title-color;
+        @include pad(){
+            font-size: $font-h2-s;
+        }
+    }    
+    p{
+
+        line-height: 2;
+        font-size: 13px;
+        margin:20px 0;
+        @include pad(){
+            font-size: $font-h5;
+        }
+    }
+}
+.recent_news{
+    width: 35%;
+    border:5px solid $border-color;
+    background:white;
+    border-radius: 5px;
+    padding:0 20px 40px;
+    @include pad(){
+        width: 80%;
+        margin-top: 20px;
+    }
+    h4{
+        font-size:$font-h4;
+        text-transform: capitalize;
+        text-align: center;
+        color:$title-color;
+        margin:20px 0 0 0;
+        @include pad(){
+            font-size: $font-h2-s;
+        }
+    }
+    h5{
+        font-size:$font-h5;
+        color:black;
+        font-weight: bold;
+        margin:20px 0  10px;
+        @include pad(){
+            font-size: $font-h4;
+        }
+
+        a{
+            color:black;
+            text-decoration: none;
+        }
+        a:hover{
+            color:#4c8f97;
+        }
+    }
+    p{
+        line-height: 2;
+        font-size: 13px;
+        margin-bottom: 20px;
+        @include pad(){
+            font-size: $font-h5;
+        }
+    }
+}
+
+//news.html end
