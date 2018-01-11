@@ -56,6 +56,9 @@ button:focus {
 body {
   background: #ededed url(../images/bg-header.gif) repeat-x top center;
   font-family: Arial, Helvetica, sans-serif; }
+  @media (max-width: 768px) {
+    body {
+      background-image: none; } }
 
 header {
   height: 180px;
@@ -64,8 +67,8 @@ header {
   background: #4c8f96; }
   @media (max-width: 768px) {
     header {
-      height: auto;
-      padding: 20px 0 0 0; } }
+      padding: 25px 0;
+      height: 50px; } }
 
 .headblock {
   position: absolute;
@@ -75,12 +78,15 @@ header {
   top: 60px; }
   @media (max-width: 768px) {
     .headblock {
-      position: relative;
+      height: 50px;
+      background: #4c8f96;
+      position: fixed;
       left: 0;
       top: 0;
       padding: 0;
       width: 100%;
-      height: auto; } }
+      padding: 0;
+      z-index: 999; } }
 
 .logo a {
   display: block;
@@ -99,15 +105,51 @@ header {
   @media (max-width: 768px) {
     .logo a {
       float: none;
-      margin: 0 auto; } }
+      margin: 0px auto;
+      height: 50px;
+      line-height: 50px;
+      font-size: 30px;
+      width: 190px; } }
+
+.showmenu {
+  display: none; }
+  @media (max-width: 768px) {
+    .showmenu {
+      display: block;
+      margin: -43px 10px 0px 0;
+      font-size: 20px;
+      float: right;
+      color: white;
+      border: 1px solid white;
+      background: #1b2130;
+      padding: 6px;
+      border-radius: 6px; } }
+
+@media (max-width: 768px) {
+  .menu-show .menu {
+    max-height: 500px; } }
 
 .menu {
   float: left;
   margin: 60px 0 0 0; }
   @media (max-width: 768px) {
     .menu {
-      float: none;
-      width: 100%; } }
+      /*隱藏選單開始*/
+      max-height: 0px;
+      overflow: hidden;
+      /*隱藏選單結束*/
+      -webkit-transition: max-height 2.3s;
+      -o-transition: max-height 2.3s;
+      transition: max-height 2.3s;
+      margin-top: 1px;
+      /*絕對定位疊在網頁上*/
+      position: absolute;
+      z-index: 30;
+      /*header 50px+1px boder 線條*/
+      top: 50px;
+      left: 0;
+      right: 0;
+      background: #1b2130; } }
 
 .menu li {
   display: block;
@@ -444,28 +486,37 @@ footer {
       .smallbox p {
         margin: 0px; } }
 
-.about {
+.about_block {
   padding: 50px 0;
   width: 960px;
   margin: 0 auto;
   color: #2f394e; }
   @media (max-width: 768px) {
-    .about {
+    .about_block {
       width: 90%; } }
-  .about h4 {
+  .about_block .about_title {
     font-size: 18px;
     margin: 20px 0;
     line-height: 2; }
     @media (max-width: 768px) {
-      .about h4 {
+      .about_block .about_title {
         font-size: 30px; } }
-  .about p {
+  .about_block p {
     line-height: 2;
     margin: 0 20px 0 0;
     font-size: 13px; }
     @media (max-width: 768px) {
-      .about p {
+      .about_block p {
         font-size: 16px; } }
+
+.hairblock {
+  padding: 50px 0;
+  width: 960px;
+  margin: 0 auto;
+  color: #2f394e; }
+  @media (max-width: 768px) {
+    .hairblock {
+      width: 90%; } }
 
 .item_gallery {
   margin: 0;
@@ -501,16 +552,17 @@ footer {
   .item_gallery li a:hover {
     opacity: 0.8; }
 
-h4 {
+.hair_title {
   font-size: 18px;
   margin: 40px 10px 0;
   line-height: 2;
   color: #2f394e; }
   @media (max-width: 768px) {
-    h4 {
-      font-size: 30px; } }
+    .hair_title {
+      font-size: 30px;
+      margin: 10px 0; } }
 
-.news_content {
+.newsblock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -522,7 +574,7 @@ h4 {
           align-items: center;
   margin: 50px 0; }
   @media (max-width: 768px) {
-    .news_content {
+    .newsblock {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -536,12 +588,12 @@ h4 {
   @media (max-width: 768px) {
     .news {
       width: 90%; } }
-  .news h4 {
+  .news .news_title {
     font-size: 18px;
     margin: 0;
     color: #2f394e; }
     @media (max-width: 768px) {
-      .news h4 {
+      .news .news_title {
         font-size: 30px; } }
   .news p {
     line-height: 2;
@@ -561,14 +613,14 @@ h4 {
     .recent_news {
       width: 80%;
       margin-top: 20px; } }
-  .recent_news h4 {
+  .recent_news .recent_news_title {
     font-size: 18px;
     text-transform: capitalize;
     text-align: center;
     color: #2f394e;
     margin: 20px 0 0 0; }
     @media (max-width: 768px) {
-      .recent_news h4 {
+      .recent_news .recent_news_title {
         font-size: 30px; } }
   .recent_news h5 {
     font-size: 16px;
@@ -592,17 +644,16 @@ h4 {
         font-size: 16px; } }
 
 @media (max-width: 768px) {
-  .contact {
+  .contactblock {
     width: 90%;
     margin: 20px auto; } }
 
-h4 {
+.contact_title {
   font-size: 18px;
-  margin: 40px 0;
+  margin: 40px 0 20px 0;
   color: #2f394e; }
   @media (max-width: 768px) {
-    h4 {
-      margin: 0;
+    .contact_title {
       font-size: 30px; } }
 
 p {

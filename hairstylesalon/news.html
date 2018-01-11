@@ -1,29 +1,24 @@
 <!DOCTYPE html>
-<!-- Doctype HTML5-->
 <html lang="zh-tw">
   <head>
-    <!-- 設置文檔的字符編碼-->
-    <meta charset="UTF-8">
-    <!-- 響應式網頁設計viewpoint聲明-->
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <!-- Meta Description-->
-    <meta name=" description " content=" Description of the page less than 150 characters ">
-    <meta property=" og:type " content=" website ">
-    <meta property=" og:url " content=" https://example.com/page.html ">
-    <meta property=" og:title " content=" Content Title ">
-    <meta property=" og:image " content=" https://example.com/image.jpg ">
-    <meta property=" og:description " content=" Description Here ">
-    <meta property=" og:site_name " content=" Site Name ">
-    <meta property=" og:locale " content=" zh_tw ">
-    <!-- 文檔標題-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/all.css">
-    <title>News</title>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name=" description " content=" Description of the page less than 150 characters "/>
+    <meta property=" og:type " content=" website "/>
+    <meta property=" og:url " content=" https://example.com/page.html "/>
+    <meta property=" og:title " content=" Content Title "/>
+    <meta property=" og:image " content=" https://example.com/image.jpg "/>
+    <meta property=" og:description " content=" Description Here "/>
+    <meta property=" og:site_name " content=" Site Name "/>
+    <meta property=" og:locale " content=" zh_tw "/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/all.css"/>
+    <title>zizurz</title>
   </head>
   <body>
     <header>
       <div class="headblock">
-        <div class="logo"><a href="#">zizurz</a></div>
+        <div class="logo"><a href="index.html">zizurz</a></div><a href="#" class="showmenu"><i aria-hidden="true" class="fa fa-bars fa-lg"></i></a>
         <ul class="menu">
           <li><a href="index.html">HOME</a></li>
           <li><a href="about.html">ABOUT</a></li>
@@ -34,9 +29,9 @@
       </div>
     </header>
     <section class="content">
-      <div class="news_content">
+      <div class="newsblock">
         <div class="news">
-          <h4>News</h4>
+          <div class="news_title">News</div>
           <p>
             Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded.
             What’s more, they’re absolutely free! You can do a lot with them. You can modify them. You can use them to
@@ -60,7 +55,7 @@
           </p>
         </div>
         <div class="recent_news">
-          <h4>Recent News</h4>
+          <div class="recent_news_title">Recent News</div>
           <h5><a href="#">Hair, I just meet you</a></h5>
           <p>
             Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded.
@@ -90,5 +85,7 @@
         </ul>
       </div>
     </footer>
+    <script src="js/vendors.js"></script>
+    <script src="js/all.js"></script>
   </body>
 </html>
