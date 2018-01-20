@@ -32,12 +32,12 @@ const color = [
     { name: 'XLWeight', bmi: 'XLWeightbmi', result: 'XLWeightword', console: '重度肥胖', color: '#FF1200' }
 ];
 
-function checktext(e) {
-    let str_input = e.target.value;
-    if (str_input == '') {
-        alert('此欄位不可為空');
-    }
-};
+// function checktext(e) {
+//     let str_input = e.target.value;
+//     if (str_input == '') {
+//         alert('此欄位不可為空');
+//     }
+// };
 
 function count(e) {
     let H = (parseInt(height.value)).toFixed(2);
