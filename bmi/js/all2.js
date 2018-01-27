@@ -90,7 +90,7 @@ function count(e) {
 					<div class="${color[i].bmi}" style="color:${color[i].color}";>BMI</div>
 					<div class="${color[i].result}" style="color:${color[i].color}";>${color[i].console}</div>
 					<div class ="img" style="background:${color[i].color};border: 3px solid ${color[i].color};">
-					<a href ="bmi.html"><img src="images/icons_loop.png"></a></div>`;
+					<a href ="index.html"><img src="images/icons_loop.png"></a></div>`;
                 result.innerHTML = str;
 
                 list_str = `<ul class="list_box">
