@@ -94,7 +94,7 @@ function count(e) {
                 result.innerHTML = str;
 
                 list_str = `<ul class="list_box">
-							<li class="colorline" style="background:${color[i].color}";></li>
+							<li class="colorline" style="background:${color[i].color}";>刪除</li>
 							<li class="list_title"><h2>${color[i].console}</h2></li>
 							<li class="list_text"><h4>BMI</h4><span>${total}</span></li>
 							<li class="list_text"><h4>weight</h4><span>${W}</span></li>

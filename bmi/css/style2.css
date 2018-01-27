@@ -365,8 +365,11 @@ li {
 
 .colorline {
     float: left;
-    width: 7px;
+    width: 20px;
     height: 62px;
+    line-height: 30px;
+    color:white;
+
 }
 
 .list_title h2 {
@@ -410,25 +413,28 @@ li {
 @media (max-width: 768px) {
     .list_box {
     width: 100%;
-    height: auto;
-    padding-top: 10px;
-    border-radius: 20px;
+    height: 50px;
+   
+   
+
     }
     .list_box li{display:inline-block;}
 
     .colorline {
     width: 20px;
     float: none;
-    height: 20px;
-    margin: 0 5px;
-    border-radius: 20px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
     }
 
     .list_title h2 {
     margin: 0;
-    width: 80px;
+    width: 100%;
     padding: 0 5px;
-    font-size: 24px;
+    font-size: 14px;
     height: auto;
     float: none;
     }
@@ -450,6 +456,7 @@ li {
 
     .list_text span {
     margin-left: 0px;
+    font-size: 12px;
     }
 
     .list_date {
@@ -457,8 +464,10 @@ li {
     height: auto;
     line-height: 1;
     float: none;
-    margin-left: 5%;
-    font-size: 12px;
+    margin:0;
+    font-size: 8px;
+    width: 8%;
+
     }
 }
 .footer {
