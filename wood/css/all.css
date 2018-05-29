@@ -7620,7 +7620,8 @@ ul.navigation li a:hover {
 
 .details {
   background: #4b3a33 url(../images/separator-light.png) repeat-x left top;
-  padding: 16px 20px 0; }
+  padding: 16px 20px 0px;
+  height: 150px; }
   .details h4 {
     color: #ffc947;
     font-weight: normal;
@@ -7638,7 +7639,8 @@ ul.navigation li a:hover {
 
 .details2 {
   background: #241b18 url(../images/separator-light.png) repeat-x left top;
-  padding: 16px 20px 0; }
+  padding: 16px 20px 0;
+  height: 150px; }
   .details2 h4 {
     color: #ffc947;
     font-weight: normal;
@@ -7821,7 +7823,8 @@ ul.navigation li a:hover {
   text-decoration: none;
   text-transform: uppercase; }
   .previous:hover, .next:hover {
-    color: #b1861f; }
+    color: #b1861f;
+    text-decoration: none; }
 
 .next_img {
   width: 24px;
@@ -8063,6 +8066,10 @@ ul.navigation li a:hover {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
+  .mobile-b30 {
+    margin-bottom: 30px; }
+  .mobile-t30 {
+    margin-top: 30px; }
   .pagination li a {
     font-size: 16px;
     padding: 5px 17px; }
