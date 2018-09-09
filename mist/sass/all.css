@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/*主色系顏色設定*/
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.header {
+  min-height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1497935586351-b67a49e012bf?dpr=1&auto=compress,format&fit=crop&w=751&h=&q=80&cs=tinysrgb&crop=);
+}
+
+.header .logo_banner img {
+  width: 100%;
+}
+
+.header .logo_banner h1 {
+  font-size: 2.3rem;
+}
+
+.header .logo_banner p {
+  font-size: 1.5rem;
+}
+
+.header .logo_banner .btn-outline-light:hover {
+  color: #000;
+}
+
+.header .logo_banner a {
+  font-size: 1.5rem;
+}
+
+.navbar-bg {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+}
+
+.bg-attachment {
+  background-attachment: fixed;
+}
+
+.border-8 {
+  border: 8px solid white !important;
+}
+
+.quotebox {
+  background-color: white;
+  padding: 5%;
+  border-radius: 30px;
+}
+
+.text-quote {
+  color: #eee;
+}
+
+.footer-bg {
+  background-color: black;
+}
+
+/*index.html開始*/
+.special {
+  background-repeat: no-repeat;
+  background-image: url(https://images.unsplash.com/photo-1414808549009-35951c724e9f?dpr=1&auto=compress,format&fit=crop&w=1650&h=&q=80&cs=tinysrgb&crop=);
+}
+/*# sourceMappingURL=all.css.map */
