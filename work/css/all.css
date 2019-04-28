@@ -3,7 +3,7 @@ body {
 
 .header {
   min-height: 100vh;
-  background-image: url(https://images.unsplash.com/photo-1500445040738-cb9363fe7fb5?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D); }
+  background-image: url(https://images.unsplash.com/photo-1544731612-de7f96afe55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80); }
   .header .logo_banner p {
     font-size: 1.5rem; }
   .header .logo_banner .btn-outline-light:hover {
@@ -19,7 +19,7 @@ body {
 
 .bg-cover {
   background-size: cover;
-  background-position: center center; }
+  background-position: left; }
 
 .bg-attachment {
   background-attachment: fixed; }
