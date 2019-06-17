@@ -2,94 +2,83 @@
 
 <head>
     <meta charset="utf-8">
-    <title>高雄旅遊網</title>
-    <link rel="stylesheet" href="css/style.css">
-   
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>高雄旅遊網BS4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.css">
+
 </head>
 
 <body>
-    <div class="wrap">
+    <div class="container-fluid cus-container">
+        <div class="wrap cus-wrap">
+            <div class="header cus-header">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="col-lg-4 text-center">
+                        <div class="header__h1">高雄旅遊資訊</div>
+                    </div>
+                    <div class="col-lg-6 text-center mt-5 mb-3">
+                        <select id="areaId" class="cus-fixed-top custom-select custom-select-lg header__select">
+                            <option value = ''>-- 請選擇行政區 --</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-8 bg-white mt-5 desktop_show">
+                        <div class="header__block ">
+                            <div class="header__block__title ">熱門行政區</div>
+                            <div class="row justify-content-center mt-1 hot_list">
+                                <a class="btn cus-btnTextColor col-lg col-md col-5 mb-1 mx-1 header__btnColor--primary" href="#" role="button">苓雅區</a>
+                                <a class="btn cus-btnTextColor col-lg col-md col-5 mb-1 mx-1 header__btnColor--secondary" href="#" role="button">三民區</a>
+                                <a class="btn cus-btnTextColor col-lg col-md col-5 mb-1 mx-1 header__btnColor--third" href="#" role="button">新興區</a>
+                                <a class="btn cus-btnTextColor col-lg col-md col-5 mb-1 mx-1 header__btnColor--forth" href="#" role="button">鹽埕區</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="header">
-            <div class="backimg">
-                <h1>高雄旅遊資訊</h1>
-                <select id="areaId">
-                    <option value="0">-- 請選擇行政區 --</option>
-                    <option value="楠梓區">楠梓區</option>
-                    <option value="左營區">左營區</option>
-                    <option value="鼓山區">鼓山區</option>
-                    <option value="三民區">三民區</option>
-                    <option value="苓雅區">苓雅區</option>
-                    <option value="新興區">新興區</option>
-                    <option value="前金區">前金區</option>
-                    <option value="鹽埕區">鹽埕區</option>
-                    <option value="前鎮區">前鎮區</option>
-                    <option value="旗津區">旗津區</option>
-                    <option value="小港區">小港區</option>
-                    <option value="鳳山區">鳳山區 </option>
-                    <option value="大寮區">大寮區 </option>
-                    <option value="鳥松區">鳥松區</option>
-                    <option value="林園區">林園區</option>
-                    <option value="仁武區">仁武區</option>
-                    <option value="大樹區">大樹區 </option>
-                    <option value="大社區">大社區</option>
-                    <option value="岡山區">岡山區</option>
-                    <option value="路竹區">路竹區</option>
-                    <option value="橋頭區">橋頭區</option>
-                    <option value="梓官區">梓官區</option>
-                    <option value="彌陀區">彌陀區</option>
-                    <option value="永安區">永安區</option>
-                    <option value="燕巢區">燕巢區</option>
-                    <option value="田寮區">田寮區</option>
-                    <option value="阿蓮區">阿蓮區</option>
-                    <option value="茄萣區">茄萣區 </option>
-                    <option value="湖內區">湖內區</option>
-                    <option value="旗山區">旗山區</option>
-                    <option value="美濃區">美濃區</option>
-                    <option value="內門區">內門區</option>
-                    <option value="田寮區">田寮區</option>
-                    <option value="杉林區">杉林區</option>
-                    <option value="甲仙區">甲仙區</option>
-                    <option value="六龜區">六龜區 </option>
-                    <option value="茂林區">茂林區</option>
-                    <option value="桃源區">桃源區</option>
-                    <option value="那瑪夏區">那瑪夏區</option>
-                </select>
-                <div class="backcolor">
-                    <h3>熱門行政區</h3>
-                    <ul class="hot_list">
-                        <li class="purple"><a href="#">苓雅區</a></li>
-                        <li class="orange"><a href="#">三民區</a></li>
-                        <li class="yellow"><a href="#">新興區</a></li>
-                        <li class="blue"><a href="#">鹽埕區</a></li>
-                    </ul>
-                </div>
+            <div class="top">
+                <a href="#"></a>
             </div>
-            <div class="header_bottom">
-                <div class="line">
-                    <div class="icon"><img src="images/icons_down.png"></div>
+            <div class="content mt-3">
+                <div class="cus-content__line">
+                    <div class="cus-content__line__icon"><img src="images/icons_down.png"></div>
+                </div>
+                <h1 class="cus-content__h1 title"></h1>
+                <div id="map" class="col-lg-6 col-md-6 col-12 mapSize mb-2"></div>
+                <ul class="list row justify-content-start mx-0 px-3">
+                </ul>
+            </div>
+            <div class="Clearfix"></div>
+            <nav aria-label="Page navigation ">
+                <ul class="pagination justify-content-center">
+                </ul>
+            </nav>
+
+            <div class="footer row justify-content-center p-0 m-0">
+                <div class="col-12 mt-3">
+                        <h4>高雄旅遊網</h4>
+                </div>
+                <div class="col-12">
+                        <p>資料來源:高雄市政府</p>
                 </div>
             </div>
         </div>
-        <div class="content">
-            <h1 class="title"></h1>
-            <div id="map"></div>
-            <ul class="list">
-            </ul>
-        </div>
-        <div class="Clearfix"></div>
-        <div class="page"></div>
-        <div class="footer">
-            <h4>高雄旅遊網</h4>
-            <p>資料來源:高雄市政府</p>
-        </div>
+
     </div>
-    <div class="top">
-            <a href="#"><img src="images/btn_goTop.png"></a>
-        </div>
-    <script src="js/all_ajex.js"></script>
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDys5Sy7VHv_SCW0Y6KwZ-hCmy8Mg20KWw&callback=initMap"
-    async defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDys5Sy7VHv_SCW0Y6KwZ-hCmy8Mg20KWw&callback=initMap"
+        async defer></script>
+        <script src="js/all.js"></script>
 </body>
 
 </html>
