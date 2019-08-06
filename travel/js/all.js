@@ -66,7 +66,7 @@ function loadData (lat,lng,title) {
         title: title,
         map: map,
     });
-      marker.addListener('click', function() {
+      marker.addEventListener('click', function() {
          if(currentInfoWindow != '')
           {
             currentInfoWindow.close();
