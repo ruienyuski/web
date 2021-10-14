@@ -230,4 +230,13 @@ body {
 .list-item:hover .list-icon i {
   color: #17a2b8;
 }
+
+/* card image
+--------------------------------*/
+.card-img-top {
+  width: 100%;
+  height: 10vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 /*# sourceMappingURL=all.css.map */
